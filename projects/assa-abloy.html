@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASSA ABLOY eCommerce Case Study | Prince Yadav</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 4rem 1rem;">
+  
+  <main style="max-width: 800px; margin: 0 auto; width: 100%;">
+    <a href="../index.html#projects" class="btn btn-secondary" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><line x1="19" x2="5" y1="12" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Portfolio
+    </a>
+
+    <article class="card" style="padding: 3rem;">
+      <span class="badge" style="margin-bottom: 1rem;">Enterprise Integration</span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.8rem; line-height: 1.2; margin-bottom: 0.5rem;">ASSA ABLOY</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">SAP-Integrated B2B/B2C Commerce & Product Configurator</p>
+      
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem;">
+        <span class="skill-tag">Adobe Commerce</span>
+        <span class="skill-tag">Magento 2 Enterprise</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Dell Boomi</span>
+        <span class="skill-tag">SAP ERP</span>
+        <span class="skill-tag">MDM</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">Redis</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 2rem; color: var(--text-primary); line-height: 1.7;">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #a5b4fc; margin-bottom: 0.75rem;">Project Overview</h3>
+          <p style="color: var(--text-secondary);">
+            ASSA ABLOY is a global leader in access control, door hardware, and security solutions. This project involved migrating their legacy IBM WebSphere platform to a unified, multi-store Adobe Commerce (Magento) environment, consolidating 39+ country sites across 30+ regions, and syncing a complex shared catalog containing 110K+ products.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #a5b4fc; margin-bottom: 0.75rem;">Key Architecture Decisions</h3>
+          <ul style="list-style-type: none; padding-left: 0; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.75rem;">
+            <li style="position: relative; padding-left: 1.25rem;">
+              <span style="position: absolute; left: 0; color: var(--accent-color);">•</span>
+              <strong>Dell Boomi Middleware:</strong> Engineered clean, robust SAP integration loops for real-time synchronization of MDM datasets, company structures, custom B2B pricing, and instant order tracking.
+            </li>
+            <li style="position: relative; padding-left: 1.25rem;">
+              <span style="position: absolute; left: 0; color: var(--accent-color);">•</span>
+              <strong>SAP-driven Configurator:</strong> Replaced high-license external SaaS options with a custom product configurator built directly on the SAP API, enabling customers to configure locks and doors with dynamic prices determined in real time.
+            </li>
+            <li style="position: relative; padding-left: 1.25rem;">
+              <span style="position: absolute; left: 0; color: var(--accent-color);">•</span>
+              <strong>Node.js Interceptor layer:</strong> Implemented lightweight Express microservices to intercept enterprise webhooks, cache dynamic query loads, and push analytics logs to monitoring systems.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #a5b4fc; margin-bottom: 0.75rem;">Results & Achievements</h3>
+          <ul style="list-style-type: none; padding-left: 0; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.75rem;">
+            <li style="position: relative; padding-left: 1.25rem;">
+              <span style="position: absolute; left: 0; color: var(--success-color);">✓</span>
+              Consolidated 39+ regional B2B domains into a single codebase and database instance.
+            </li>
+            <li style="position: relative; padding-left: 1.25rem;">
+              <span style="position: absolute; left: 0; color: var(--success-color);">✓</span>
+              Improved API throughput and reduced latencies by 30-40% using optimized query loops and custom Redis caching structures.
+            </li>
+            <li style="position: relative; padding-left: 1.25rem;">
+              <span style="position: absolute; left: 0; color: var(--success-color);">✓</span>
+              Established robust automated testing, linting, and zero/minimal downtime deployment workflows on Magento Cloud.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </main>
+
+</body>
+</html>
