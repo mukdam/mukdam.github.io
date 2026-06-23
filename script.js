@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', highlightNav);
 
   // Spotlight Effect for Cards
-  const cards = document.querySelectorAll('.card, .skill-category');
+  const cards = document.querySelectorAll('.card, .skill-category, .contact-method');
   cards.forEach(card => {
     card.addEventListener('mousemove', e => {
       const rect = card.getBoundingClientRect();
