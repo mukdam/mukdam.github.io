@@ -184,10 +184,17 @@ function fallbackCopy(text, label) {
   try {
     document.execCommand('copy');
     showToast(`${label} copied to clipboard!`);
+    trackAnalyticsEvent('copy_contact_info', { label: label });
   } catch (err) {
     showToast(`Failed to copy ${label}`);
   }
   document.body.removeChild(textArea);
+}
+
+function trackAnalyticsEvent(eventName, params = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, params);
+  }
 }
 
 function showToast(message) {

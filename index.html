@@ -37,6 +37,20 @@
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics 4 (GA4) - Replace G-MEASUREMENT_ID with your actual GA4 ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Config options (Update 'G-MEASUREMENT_ID' when you create your Google Analytics account)
+    gtag('config', 'G-MEASUREMENT_ID', {
+      anonymize_ip: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+  </script>
 </head>
 
 <body>
