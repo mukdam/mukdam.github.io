@@ -1,0 +1,7 @@
+# Research & Temp Files
+R&D.txt
+
+# OS & Environment Files
+.DS_Store
+Thumbs.db
+*.log
