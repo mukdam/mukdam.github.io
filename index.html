@@ -1,382 +1,770 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prince Yadav | Adobe Commerce Architect & Integration Specialist</title>
-  <meta name="description" content="Portfolio of Prince Yadav, Solution Architect with 12+ years of experience in Adobe Commerce (Magento 2), SAP integrations, and AWS architectures.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Prince Yadav | Solution Architect | Adobe Commerce, React & Node.js Specialist</title>
 
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Portfolio of Prince Yadav, Solution Architect with 12+ years of experience in Adobe Commerce (Magento 2), MonitoringCarrier (React & Node.js), SAP & Boomi integrations, and AWS cloud architectures." />
+  <meta name="keywords"
+    content="Solution Architect, Adobe Commerce Developer, MonitoringCarrier, React, Node.js, Magento 2, SAP Integration, Boomi, PHP, AWS, Docker, AI Engineering, Jaipur, India" />
+  <meta name="author" content="Prince Yadav" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://mukdam.github.io/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Prince Yadav | Solution Architect | Adobe Commerce, React & Node.js Specialist" />
+  <meta property="og:description"
+    content="Solution Architect with 12+ years experience in Adobe Commerce, React & Node.js (MonitoringCarrier), SAP integrations, and AWS architectures." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mukdam.github.io/" />
+  <meta property="og:image" content="https://mukdam.github.io/PrincePic.jpg" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#home" class="logo">Prince Yadav</a>
-    <ul class="nav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<body>
+  <!-- Canvas Background for dynamic particle network -->
+  <canvas id="canvas-bg" aria-hidden="true"></canvas>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo-link" aria-label="Prince Yadav Portfolio">
+        <div class="nav-brand">
+          <div class="nav-avatar-wrapper">
+            <img src="PrincePic.jpg" alt="Prince Yadav" class="nav-avatar-img" />
+            <span class="status-dot" title="Available for Architecture & Consulting"></span>
+          </div>
+          <div class="nav-brand-info">
+            <span class="nav-brand-name">Prince Yadav</span>
+            <span class="nav-brand-title"><i class="fas fa-crown"></i> Solution Architect</span>
+          </div>
+        </div>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#about"><i class="fas fa-chart-line"></i> About</a>
+        <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#skills"><i class="fas fa-microchip"></i> Skills</a>
+        <a href="#architecture"><i class="fas fa-network-wired"></i> Solutions</a>
+        <a href="#projects"><i class="fas fa-rocket"></i> Projects</a>
+        <a href="#education"><i class="fas fa-certificate"></i> Education</a>
+        <a href="#contact" class="nav-cta"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <span class="badge">Solution Architect</span>
-      <h1 class="hero-title">Building Scalable<br><span>eCommerce Platforms</span></h1>
-      <p class="hero-description">
-        I am an Adobe Commerce (Magento) Specialist and Integration Architect with 12+ years of experience designing and scaling global B2B/B2C systems. Expert in SAP/Boomi integrations and cloud-native AWS deployments.
-      </p>
-      <div class="cta-group">
-        <a href="#contact" class="btn btn-primary">Let's Connect</a>
-        <a href="Prince Resume Magento.pdf" class="btn btn-secondary" download>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download" style="margin-right: 8px; vertical-align: middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>Download CV
+  <!-- Main Content Container -->
+  <main class="container" id="main-content">
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-wrapper">
+      <div class="hero-content">
+        <div class="hero-greeting">
+          <i class="fas fa-terminal"></i> <span>Hello, World! I am</span>
+        </div>
+        <h1 class="hero-name">Prince Yadav</h1>
+        <div class="hero-tagline">
+          <span class="tag-pill tag-highlight"><i class="fas fa-crown"></i> Solution Architect</span>
+          <span class="tag-pill tag-adobe"><i class="fas fa-certificate"></i> Adobe Certified</span>
+          <span class="tag-pill"><i class="fab fa-react"></i> React &amp; Node.js (MonitoringCarrier)</span>
+          <span class="tag-pill"><i class="fas fa-plug"></i> SAP &amp; Boomi Integration</span>
+          <span class="tag-pill"><i class="fas fa-brain"></i> AI-Enabled Engineering</span>
+        </div>
+        <p class="hero-desc">
+          Solution Architect with <strong>12+ years of experience</strong> architecting, scaling, and optimizing global B2B/B2C eCommerce platforms and microservices. Engineered <strong>MonitoringCarrier (ShipEngine Tracking Tool) with React &amp; Node.js</strong>, specialized in <strong>Adobe Commerce (Magento 2)</strong>, enterprise <strong>SAP/MDM integration patterns via Boomi</strong>, and cloud-native AWS deployments.
+        </p>
+
+        <div class="status-badge">
+          <span class="status-pulse"></span>
+          <span>Currently Staff Engineer @ Nagarro (ASSA ABLOY Global Platform &amp; MonitoringCarrier)</span>
+        </div>
+
+        <div class="cta-group">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Let's Connect
+          </a>
+          <a href="Prince Resume Magento & Js.pdf" class="btn btn-secondary" download>
+            <i class="fas fa-download"></i> Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="avatar-frame">
+          <img src="PrincePic.jpg" alt="Prince Yadav - Solution Architect" class="avatar-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Insight / Stats Section -->
+    <section id="about" class="section-block reveal">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fas fa-chart-line title-icon text-emerald"></i> Profile Insight
+        </h2>
+        <p class="section-subtitle">Architecting high-availability platforms, React/Node.js microservices, and SAP enterprise integrations</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="card about-main-card spotlight-card">
+          <div class="about-text">
+            <p>
+              I am a <strong>Solution Architect</strong> &amp; <strong>Engineering Leader</strong> with over 12 years of hands-on expertise building enterprise-grade digital commerce architectures and full-stack microservices.
+            </p>
+            <p>
+              At <strong>Nagarro</strong>, I lead architecture for global platforms including <strong>ASSA ABLOY</strong>. I engineered <strong>MonitoringCarrier (ShipEngine Tracking Tool)</strong>—a comprehensive shipping operations and multi-carrier tracking service powered by <strong>ShipEngine API, React, and Node.js</strong>—streamlining end-to-end logistics workflows, real-time carrier status telemetry, and order processing across 30+ regions.
+            </p>
+            <p>
+              My expertise spans consolidating multi-country storefronts (39+ regions), designing real-time <strong>SAP (MDM, Pricing, Orders) integrations via Boomi</strong>, custom SAP-driven product configurators, and leveraging <strong>AI-assisted development tools</strong> (GitHub Copilot, Gemini, ChatGPT) for automated code reviews and optimal performance.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card spotlight-card">
+            <div class="stat-icon"><i class="fas fa-hourglass-half"></i></div>
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Years Enterprise Exp.</div>
+          </div>
+          <div class="stat-card spotlight-card">
+            <div class="stat-icon"><i class="fab fa-react"></i></div>
+            <div class="stat-number">React/Node</div>
+            <div class="stat-label">MonitoringCarrier Core</div>
+          </div>
+          <div class="stat-card spotlight-card">
+            <div class="stat-icon"><i class="fas fa-globe"></i></div>
+            <div class="stat-number">39+</div>
+            <div class="stat-label">Country Platforms</div>
+          </div>
+          <div class="stat-card spotlight-card">
+            <div class="stat-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="stat-number">30-40%</div>
+            <div class="stat-label">API Throughput Boost</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="section-block reveal">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fas fa-briefcase title-icon text-indigo"></i> Professional Journey
+        </h2>
+        <p class="section-subtitle">Over a decade of engineering leadership, system design, and high-scale eCommerce deployment</p>
+      </div>
+
+      <div class="timeline">
+        
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item spotlight-card">
+          <div class="timeline-dot"><i class="fas fa-shipping-fast"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Staff Engineer</h3>
+                <span class="timeline-company"><i class="fas fa-building"></i> Nagarro</span>
+                <span class="timeline-client"><i class="fas fa-handshake"></i> Client: ASSA ABLOY (Global B2B/B2C)</span>
+              </div>
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jan 2026 – Present</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li><strong>MonitoringCarrier (ShipEngine Tracking Tool):</strong> Developed and maintained comprehensive shipping operations and carrier tracking modules using <strong>ShipEngine API, React, and Node.js</strong>, streamlining multi-carrier status telemetry, automated delivery alerts, and order status handling.</li>
+                <li>Owned platform architecture and scalability for multi-country commerce handling <strong>100K+ SKUs</strong> and high-volume transactions across <strong>30+ regions</strong>.</li>
+                <li>Led end-to-end architecture for global platform optimization, improving throughput and system performance by <strong>30%+</strong>.</li>
+                <li>Defined enterprise <strong>SAP (MDM, Pricing, Orders) integration patterns via Boomi</strong>, ensuring real-time data synchronization and resilient error-handling strategies.</li>
+                <li>Architected an <strong>SAP-based product configurator</strong> with real-time dynamic pricing APIs, replacing legacy third-party tools and eliminating high software licensing costs.</li>
+                <li>Set architectural standards for indexing, caching, and code reviews while mentoring cross-functional engineering teams.</li>
+              </ul>
+            </div>
+            <div class="timeline-tags">
+              <span>MonitoringCarrier</span>
+              <span>React</span>
+              <span>Node.js / Express</span>
+              <span>Adobe Commerce</span>
+              <span>Dell Boomi</span>
+              <span>SAP ERP</span>
+              <span>AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item spotlight-card">
+          <div class="timeline-dot"><i class="fas fa-layer-group"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Associate Staff Engineer</h3>
+                <span class="timeline-company"><i class="fas fa-building"></i> Nagarro</span>
+                <span class="timeline-client"><i class="fas fa-handshake"></i> Clients: ASSA ABLOY &amp; VF Corporation (Kipling, Eastpak)</span>
+              </div>
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Aug 2020 – Dec 2025</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Spearheaded platform foundation setup and migration from <strong>IBM WebSphere to Adobe Commerce Cloud</strong> for ASSA ABLOY.</li>
+                <li>Consolidated <strong>39+ country storefronts</strong> into a unified, multi-domain Adobe Commerce application.</li>
+                <li>Managed 110K+ shared catalog items with complex custom pricing matrices and B2B organizational hierarchy structures.</li>
+                <li>Improved API performance and reduced latencies by <strong>30–40%</strong> through Varnish, Redis, and GraphQL query optimization.</li>
+                <li>Streamlined production incident management and alert monitoring, decreasing incident resolution time by <strong>25%</strong>.</li>
+                <li>Led DevOps CI/CD deployment pipelines, ensuring zero-downtime releases for VF Corporation retail platforms.</li>
+              </ul>
+            </div>
+            <div class="timeline-tags">
+              <span>Magento Cloud</span>
+              <span>B2B Platform</span>
+              <span>GraphQL</span>
+              <span>Varnish</span>
+              <span>Redis</span>
+              <span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item spotlight-card">
+          <div class="timeline-dot"><i class="fas fa-code"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <span class="timeline-company"><i class="fas fa-building"></i> Auriga IT</span>
+              </div>
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Oct 2015 – Aug 2020</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li><strong>Amazon Pay Official Plugin:</strong> Built official settlement, refund, and payment capture plugin for Magento 1.x &amp; 2.x platforms.</li>
+                <li><strong>Get Healthy:</strong> Engineered client-side components for customized medical appointment scheduling on Magento 2.3.2.</li>
+                <li><strong>Nihal Fashion &amp; Shopagi:</strong> Built high-performance eCommerce stores with complex custom options measurement configurators for custom apparel.</li>
+                <li><strong>Ellementry:</strong> Developed Node.js microservice for real-time sales reporting and analytics integration with Magento REST endpoints.</li>
+                <li><strong>Angara:</strong> Executed Magento 1.x &rarr; 2.x database schema migrations and catalog speed optimizations.</li>
+              </ul>
+            </div>
+            <div class="timeline-tags">
+              <span>Magento 2.x</span>
+              <span>Node.js</span>
+              <span>Amazon Pay SDK</span>
+              <span>REST APIs</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item spotlight-card">
+          <div class="timeline-dot"><i class="fas fa-terminal"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <span class="timeline-company"><i class="fas fa-building"></i> Gravita / WDP / Jhalani</span>
+              </div>
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Oct 2013 – Sep 2015</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Developed custom Magento extensions, payment gateway integrations, and frontend theme customizations.</li>
+                <li>Optimized order processing workflows and inventory synchronization for client web stores.</li>
+              </ul>
+            </div>
+            <div class="timeline-tags">
+              <span>PHP</span>
+              <span>Magento 1.x</span>
+              <span>Payment Gateways</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section-block reveal">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fas fa-microchip title-icon text-cyan"></i> Technical Ecosystem
+        </h2>
+        <p class="section-subtitle">Comprehensive technical stack spanning full-stack React/Node.js, Adobe Commerce, cloud infrastructure, and AI tools</p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <div class="card skill-card spotlight-card">
+          <div class="skill-header">
+            <div class="skill-icon icon-backend"><i class="fab fa-react"></i></div>
+            <h3>React, Node.js &amp; Microservices</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-badge highlight"><i class="fab fa-react" style="color: #61dafb;"></i> React.js</span>
+            <span class="skill-badge highlight"><i class="fab fa-node-js" style="color: #68a063;"></i> Node.js / Express</span>
+            <span class="skill-badge highlight"><i class="fas fa-truck-fast" style="color: #38bdf8;"></i> MonitoringCarrier</span>
+            <span class="skill-badge highlight"><i class="fas fa-satellite-dish" style="color: #c084fc;"></i> ShipEngine Tracking API</span>
+            <span class="skill-badge"><i class="fas fa-plug" style="color: #fb7185;"></i> REST APIs &amp; Webhooks</span>
+            <span class="skill-badge"><i class="fas fa-bolt" style="color: #fbbf24;"></i> Event-Driven Architecture</span>
+            <span class="skill-badge"><i class="fas fa-cubes" style="color: #34d399;"></i> Microservices</span>
+          </div>
+        </div>
+
+        <div class="card skill-card spotlight-card">
+          <div class="skill-header">
+            <div class="skill-icon icon-magento"><i class="fab fa-magento"></i></div>
+            <h3>eCommerce &amp; Enterprise Architecture</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-badge highlight"><i class="fab fa-magento" style="color: #ff6600;"></i> Adobe Commerce (Magento 2)</span>
+            <span class="skill-badge"><i class="fas fa-layer-group" style="color: #22d3ee;"></i> Headless Commerce</span>
+            <span class="skill-badge"><i class="fas fa-store" style="color: #a78bfa;"></i> Multi-store &amp; Multi-tenant</span>
+            <span class="skill-badge highlight"><i class="fas fa-network-wired" style="color: #38bdf8;"></i> SAP Integration</span>
+            <span class="skill-badge"><i class="fas fa-database" style="color: #2dd4bf;"></i> MDM Integration</span>
+            <span class="skill-badge"><i class="fas fa-exchange-alt" style="color: #34d399;"></i> Dell Boomi</span>
+            <span class="skill-badge"><i class="fas fa-building" style="color: #f59e0b;"></i> B2B Commerce</span>
+          </div>
+        </div>
+
+        <div class="card skill-card spotlight-card">
+          <div class="skill-header">
+            <div class="skill-icon icon-cloud"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud, DevOps &amp; Observability</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-badge highlight"><i class="fab fa-aws" style="color: #ff9900;"></i> AWS (EC2, S3, RDS)</span>
+            <span class="skill-badge"><i class="fab fa-docker" style="color: #38bdf8;"></i> Docker</span>
+            <span class="skill-badge"><i class="fab fa-git-alt" style="color: #f05032;"></i> CI/CD Pipelines (Git)</span>
+            <span class="skill-badge"><i class="fas fa-cloud" style="color: #ff6600;"></i> Adobe Commerce Cloud</span>
+            <span class="skill-badge"><i class="fas fa-chart-bar" style="color: #008c99;"></i> NewRelic</span>
+            <span class="skill-badge"><i class="fas fa-eye" style="color: #fbbf24;"></i> CloudWatch</span>
+          </div>
+        </div>
+
+        <div class="card skill-card spotlight-card">
+          <div class="skill-header">
+            <div class="skill-icon icon-data"><i class="fas fa-database"></i></div>
+            <h3>Performance &amp; Data Engineering</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-badge highlight"><i class="fas fa-memory" style="color: #f43f5e;"></i> Redis Caching</span>
+            <span class="skill-badge"><i class="fas fa-search" style="color: #06b6d4;"></i> ElasticSearch / OpenSearch</span>
+            <span class="skill-badge"><i class="fas fa-tachometer-alt" style="color: #60a5fa;"></i> Varnish Cache</span>
+            <span class="skill-badge"><i class="fas fa-database" style="color: #38bdf8;"></i> MySQL Optimization</span>
+            <span class="skill-badge"><i class="fas fa-leaf" style="color: #47a248;"></i> MongoDB</span>
+            <span class="skill-badge"><i class="fas fa-server" style="color: #34d399;"></i> High-Throughput Indexing</span>
+          </div>
+        </div>
+
+        <div class="card skill-card spotlight-card full-width-skill">
+          <div class="skill-header">
+            <div class="skill-icon icon-ai"><i class="fas fa-brain"></i></div>
+            <h3>AI-Assisted Engineering &amp; Productivity</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-badge ai-highlight"><i class="fab fa-github" style="color: #a78bfa;"></i> GitHub Copilot</span>
+            <span class="skill-badge ai-highlight"><i class="fas fa-sparkles" style="color: #38bdf8;"></i> Gemini Pro / Antigravity</span>
+            <span class="skill-badge ai-highlight"><i class="fas fa-comments" style="color: #34d399;"></i> ChatGPT Enterprise</span>
+            <span class="skill-badge"><i class="fas fa-robot" style="color: #fb7185;"></i> AI Code Review Pipelines</span>
+            <span class="skill-badge"><i class="fas fa-terminal" style="color: #c084fc;"></i> Prompt Engineering &amp; Automation</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Key Architecture Solutions (Creative Section) -->
+    <section id="architecture" class="section-block reveal">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fas fa-network-wired title-icon text-amber"></i> Key Architecture Solutions
+        </h2>
+        <p class="section-subtitle">High-impact architectural patterns engineered for global enterprise scalability</p>
+      </div>
+
+      <div class="arch-grid">
+        
+        <div class="card arch-card spotlight-card">
+          <div class="arch-number">01</div>
+          <div class="arch-icon"><i class="fas fa-truck-loading"></i></div>
+          <h3>MonitoringCarrier (ShipEngine Tracking Tool)</h3>
+          <p>
+            Architected real-time shipping operations and carrier tracking microservices using <strong>ShipEngine API</strong>, React, and Node.js to stream multi-carrier tracking telemetry, automated delivery alerts, and order logistics across enterprise regions.
+          </p>
+          <div class="arch-pill"><i class="fas fa-check-circle"></i> ShipEngine API &amp; React/Node.js</div>
+        </div>
+
+        <div class="card arch-card spotlight-card">
+          <div class="arch-number">02</div>
+          <div class="arch-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>SAP Boomi Real-Time Synchronization</h3>
+          <p>
+            Designed custom integration middleware schemas in Dell Boomi to synchronize MDM catalog, customer pricing matrices, and B2B corporate account orders between SAP ERP and Adobe Commerce in real time.
+          </p>
+          <div class="arch-pill"><i class="fas fa-check-circle"></i> Zero data loss retry queues</div>
+        </div>
+
+        <div class="card arch-card spotlight-card">
+          <div class="arch-number">03</div>
+          <div class="arch-icon"><i class="fas fa-cogs"></i></div>
+          <h3>SAP Dynamic Product Configurator</h3>
+          <p>
+            Engineered an API-driven product configuration engine in Node.js &amp; React that queries SAP directly for live component compatibility and pricing rules, bypassing third-party SaaS tools.
+          </p>
+          <div class="arch-pill"><i class="fas fa-check-circle"></i> Eliminated SaaS licensing costs</div>
+        </div>
+
+        <div class="card arch-card spotlight-card">
+          <div class="arch-number">04</div>
+          <div class="arch-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3>39+ Region Multi-Tenant Architecture</h3>
+          <p>
+            Consolidated fragmented country web applications into a single global multi-store codebase on Adobe Commerce Cloud with localized currencies, languages, and region-specific checkout rules.
+          </p>
+          <div class="arch-pill"><i class="fas fa-check-circle"></i> 30-40% throughput increase</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Key Projects Section -->
+    <section id="projects" class="section-block reveal">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fas fa-rocket title-icon text-emerald"></i> Featured Projects
+        </h2>
+        <p class="section-subtitle">Real-world case studies of enterprise systems built for global brands</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: MonitoringCarrier (ShipEngine Tracking Tool) -->
+        <div class="card project-card spotlight-card">
+          <div class="project-header">
+            <span class="project-tag tag-microservice">ShipEngine &amp; React / Node.js</span>
+            <h3 class="project-title">MonitoringCarrier</h3>
+          </div>
+          <p class="project-desc">
+            Enterprise shipping operations &amp; multi-carrier tracking platform powered by <strong>ShipEngine API</strong>, React, and Node.js. Automates carrier status telemetry, real-time package tracking, delivery exception alerts, and order logistics integration.
+          </p>
+          <div class="project-tech">
+            <span>ShipEngine API</span>
+            <span>React.js</span>
+            <span>Node.js / Express</span>
+            <span>Carrier Telemetry</span>
+            <span>REST &amp; Webhooks</span>
+          </div>
+          <div class="project-actions">
+            <a href="projects/monitoring-carrier.html" class="btn btn-primary btn-sm" style="width: 100%; text-align: center;"><i class="fas fa-file-alt"></i> View Case Details</a>
+          </div>
+        </div>
+
+        <!-- Project 2: ASSA ABLOY -->
+        <div class="card project-card spotlight-card">
+          <div class="project-header">
+            <span class="project-tag tag-enterprise">Enterprise Commerce</span>
+            <h3 class="project-title">ASSA ABLOY</h3>
+          </div>
+          <p class="project-desc">
+            Global migration of 39+ country sites from IBM WebSphere to Adobe Commerce Cloud. Includes custom SAP product configurator pipelines, Boomi integrations, and shipping operations modules with React &amp; Node.js.
+          </p>
+          <div class="project-tech">
+            <span>Adobe Commerce</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Dell Boomi</span>
+            <span>SAP ERP</span>
+          </div>
+          <div class="project-actions">
+            <a href="projects/assa-abloy.html" class="btn btn-secondary btn-sm" style="width: 100%; text-align: center;"><i class="fas fa-file-alt"></i> View Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project 3: VF Corporation -->
+        <div class="card project-card spotlight-card">
+          <div class="project-header">
+            <span class="project-tag tag-retail">Global Retail</span>
+            <h3 class="project-title">VF Corporation (Kipling &amp; Eastpak)</h3>
+          </div>
+          <p class="project-desc">
+            High-volume B2B &amp; B2C platforms for global fashion brands. Engineered multi-currency checkout, custom catalog options, and high-concurrency event flash sale stability.
+          </p>
+          <div class="project-tech">
+            <span>Magento 2</span>
+            <span>GraphQL</span>
+            <span>Varnish</span>
+            <span>Redis</span>
+            <span>AWS</span>
+          </div>
+          <div class="project-actions">
+            <a href="projects/vf-corp.html" class="btn btn-secondary btn-sm"><i class="fas fa-file-alt"></i> Case Study</a>
+            <a href="https://www.kipling.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Ellementry -->
+        <div class="card project-card spotlight-card">
+          <div class="project-header">
+            <span class="project-tag tag-api">Microservices &amp; APIs</span>
+            <h3 class="project-title">Ellementry</h3>
+          </div>
+          <p class="project-desc">
+            Custom Node.js analytics and sales reporting engine integrated with Magento REST APIs, delivering real-time executive dashboard reporting and inventory synchronization.
+          </p>
+          <div class="project-tech">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>Magento REST API</span>
+            <span>MySQL</span>
+          </div>
+          <div class="project-actions">
+            <a href="projects/ellementry.html" class="btn btn-secondary btn-sm"><i class="fas fa-file-alt"></i> Case Study</a>
+            <a href="https://www.ellementry.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+          </div>
+        </div>
+
+        <!-- Project 5: Angara -->
+        <div class="card project-card spotlight-card">
+          <div class="project-header">
+            <span class="project-tag tag-migration">Platform Migration</span>
+            <h3 class="project-title">Angara Jewelry</h3>
+          </div>
+          <p class="project-desc">
+            Magento 1.x to 2.x data migration, complex database schema mapping, custom gemstone option selectors, and page speed optimization with Varnish caching clusters.
+          </p>
+          <div class="project-tech">
+            <span>Magento 2.x</span>
+            <span>Varnish</span>
+            <span>Data Migration</span>
+            <span>PHP</span>
+          </div>
+          <div class="project-actions">
+            <a href="projects/angara.html" class="btn btn-secondary btn-sm"><i class="fas fa-file-alt"></i> Case Study</a>
+            <a href="https://www.angara.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+          </div>
+        </div>
+
+        <!-- Project 6: Amazon Pay Plugin -->
+        <div class="card project-card spotlight-card">
+          <div class="project-header">
+            <span class="project-tag tag-sdk">Official SDK Plugin</span>
+            <h3 class="project-title">Amazon Pay Module</h3>
+          </div>
+          <p class="project-desc">
+            Developed official transaction settlement, refund, and authorization SDK plugin for Magento 1.x &amp; 2.x, deployed across thousands of merchant web stores.
+          </p>
+          <div class="project-tech">
+            <span>Magento 2 Module</span>
+            <span>Amazon Pay API</span>
+            <span>Payment Gateway</span>
+          </div>
+          <div class="project-actions">
+            <a href="projects/amazon-pay.html" class="btn btn-secondary btn-sm" style="width: 100%; text-align: center;"><i class="fas fa-file-alt"></i> View Case Study</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="section-block reveal">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fas fa-award title-icon text-indigo"></i> Certifications &amp; Credentials
+        </h2>
+        <p class="section-subtitle">Verified professional Adobe certification and academic foundation</p>
+      </div>
+
+      <div class="cert-grid">
+        
+        <div class="card cert-card spotlight-card">
+          <div class="cert-badge-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="cert-details">
+            <span class="cert-issuer">Adobe Certified Professional</span>
+            <h3 class="cert-title">Adobe Commerce Developer</h3>
+            <p class="cert-id"><i class="fas fa-fingerprint"></i> Credential ID: <code>8666b88f-ebba-11ef-9883-42010a40002a</code></p>
+            <p class="cert-validity"><i class="far fa-calendar-check"></i> Active: Feb 2025 &ndash; Feb 2027</p>
+          </div>
+        </div>
+
+        <div class="card cert-card spotlight-card">
+          <div class="cert-badge-icon icon-academic">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="cert-details">
+            <span class="cert-issuer">Rajasthan Technical University</span>
+            <h3 class="cert-title">Bachelor of Technology (B.Tech)</h3>
+            <p class="cert-id"><i class="fas fa-microchip"></i> Computer Science &amp; Engineering</p>
+            <p class="cert-validity"><i class="far fa-calendar-alt"></i> Graduated: 2007 &ndash; 2011</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section (Reference Inspired `#contact` + Interactive Terminal Console Log) -->
+    <section id="contact" class="section-block reveal">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fas fa-paper-plane title-icon text-emerald"></i> Let's Connect
+        </h2>
+        <p class="section-subtitle">Have a complex architecture project, React/Node microservices, or integration challenge? Reach out directly!</p>
+      </div>
+
+      <div class="contact-wrapper">
+        
+        <!-- Quick Contact Information Cards Grid -->
+        <div class="contact-cards-grid">
+          
+          <!-- Email Card -->
+          <div class="card contact-card spotlight-card">
+            <div class="contact-icon icon-email"><i class="fas fa-envelope"></i></div>
+            <div class="contact-info">
+              <h4>Email Address</h4>
+              <p><a href="mailto:princemukdam@gmail.com">princemukdam@gmail.com</a></p>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard('princemukdam@gmail.com', 'Email Address')" aria-label="Copy Email">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- Phone / WhatsApp Card -->
+          <div class="card contact-card spotlight-card">
+            <div class="contact-icon icon-whatsapp"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-info">
+              <h4>Phone / WhatsApp</h4>
+              <p><a href="https://wa.me/919887852003" target="_blank" rel="noopener">+91-9887852003</a></p>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard('+919887852003', 'Phone Number')" aria-label="Copy Phone">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- Resume PDF Download Card -->
+          <div class="card contact-card spotlight-card">
+            <div class="contact-icon icon-cv"><i class="fas fa-file-pdf"></i></div>
+            <div class="contact-info">
+              <h4>Resume / CV</h4>
+              <p><a href="Prince Resume Magento & Js.pdf" download>Prince Resume (PDF)</a></p>
+            </div>
+            <a href="Prince Resume Magento & Js.pdf" download class="external-link" aria-label="Download Resume">
+              <i class="fas fa-download"></i>
+            </a>
+          </div>
+
+          <!-- LinkedIn Card -->
+          <div class="card contact-card spotlight-card">
+            <div class="contact-icon icon-linkedin"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-info">
+              <h4>LinkedIn Profile</h4>
+              <p><a href="https://linkedin.com/in/prince-yadav-80001359" target="_blank" rel="noopener">prince-yadav-80001359</a></p>
+            </div>
+            <a href="https://linkedin.com/in/prince-yadav-80001359" target="_blank" rel="noopener" class="external-link" aria-label="Open LinkedIn">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <!-- GitHub Card -->
+          <div class="card contact-card spotlight-card">
+            <div class="contact-icon icon-github"><i class="fab fa-github"></i></div>
+            <div class="contact-info">
+              <h4>GitHub Profile</h4>
+              <p><a href="https://github.com/mukdam" target="_blank" rel="noopener">github.com/mukdam</a></p>
+            </div>
+            <a href="https://github.com/mukdam" target="_blank" rel="noopener" class="external-link" aria-label="Open GitHub">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Interactive Terminal Console & Telemetry Log (Replaces dummy message form) -->
+        <div class="card terminal-console-card spotlight-card">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">system_telemetry.log &mdash; bash</div>
+            <div class="terminal-actions">
+              <button onclick="clearTerminalLogs()" title="Clear Logs"><i class="fas fa-eraser"></i></button>
+            </div>
+          </div>
+          
+          <div class="terminal-body" id="terminal-body">
+            <div class="log-line text-emerald">[INIT] Prince Yadav Architecture Console v2.6 Online</div>
+            <div class="log-line">[STATUS] MonitoringCarrier Service (React/Node): <span class="badge-online">ACTIVE</span></div>
+            <div class="log-line">[STATUS] SAP Boomi Middleware Interface: <span class="badge-online">SYNCED</span></div>
+            <div class="log-line">[STATUS] Adobe Commerce Global Multi-Tenant: <span class="badge-online">39+ REGIONS</span></div>
+            <div class="log-line text-cyan">[CLI] Type a command or click a quick action below:</div>
+            <div id="dynamic-logs"></div>
+          </div>
+
+          <div class="terminal-quick-actions">
+            <button onclick="execTermCmd('cat contact.json')">cat contact.json</button>
+            <button onclick="execTermCmd('status')">system status</button>
+            <button onclick="execTermCmd('skills')">skills</button>
+            <button onclick="execTermCmd('clear')">clear</button>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="term-prompt">prince@architect:~$</span>
+            <input type="text" id="term-input" placeholder="Type 'help' or command..." onkeydown="handleTermInput(event)" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>&copy; 2026 <strong>Prince Yadav</strong>. Architected with passion, React/Node microservices &amp; performance.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i> Top
         </a>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="PrincePic.jpg" alt="Prince Yadav">
-    </div>
-  </section>
+  </footer>
 
-  <!-- Experience Section -->
-  <section id="experience" class="reveal">
-    <div class="section-header">
-      <h2 class="section-title">Professional Journey</h2>
-      <p class="section-subtitle">Over 12 years of architecting high-performance enterprise systems</p>
-    </div>
-    <div class="timeline">
-      
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">Jan 2026 – Present</span>
-          <h3 class="timeline-title">Staff Engineer</h3>
-          <span class="timeline-company">Nagarro</span>
-          <div class="timeline-desc">
-            <ul>
-              <li>Lead architect for ASSA ABLOY's multi-country eCommerce ecosystem (100K+ SKUs, 30+ regions).</li>
-              <li>Designed and built SAP-based product configurators with real-time dynamic pricing.</li>
-              <li>Engineered SAP (MDM, Pricing, Orders) integration patterns via Boomi, ensuring real-time data sync and error handling.</li>
-              <li>Mentored development teams and established architecture, indexing, and coding standards.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">Aug 2020 – Dec 2025</span>
-          <h3 class="timeline-title">Associate Staff Engineer</h3>
-          <span class="timeline-company">Nagarro</span>
-          <div class="timeline-desc">
-            <ul>
-              <li>Spearheaded IBM WebSphere to Adobe Commerce cloud migration for ASSA ABLOY.</li>
-              <li>Consolidated 39+ country storefronts into a unified multi-domain architecture.</li>
-              <li>Improved API throughput and reduced latencies by 30-40% via custom cache optimization.</li>
-              <li>Lead DevOps and CI/CD operations, improving release reliability and decreasing incident resolution time by 25%.</li>
-              <li>Architected and developed complex B2B storefront systems for VF Corporation (Kipling, Eastpak).</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">Oct 2015 – Aug 2020</span>
-          <h3 class="timeline-title">Software Engineer</h3>
-          <span class="timeline-company">Auriga IT</span>
-          <div class="timeline-desc">
-            <ul>
-              <li>Developed and customized Magento 2.x modules, plugins, and APIs for multiple eCommerce brands.</li>
-              <li>Migrated Magento 1.x &rarr; 2.x platforms and optimized store performance with caching and indexing (Angara).</li>
-              <li>Built client-side elements for Get Healthy, a customized medical scheduling system on Magento 2.3.2.</li>
-              <li>Optimized catalog configurations and custom option flows for Nihal Fashion, Shopagi, and PJ Custom.</li>
-              <li>Created a Node.js reporting/analytics service and Magento REST APIs for Ellementry.</li>
-              <li>Developed the official Amazon Pay settlement and refund module for Magento 1.x & 2.x.</li>
-              <li>Built bespoke shirt customization modules for Cutasu.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">Oct 2013 – Sep 2015</span>
-          <h3 class="timeline-title">Software Engineer</h3>
-          <span class="timeline-company">Gravita / WDP / Jhalani</span>
-          <div class="timeline-desc">
-            <ul>
-              <li>Developed custom Magento extensions, theme configurations, and API modules.</li>
-              <li>Integrated payment and logistics gateways.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="reveal">
-    <div class="section-header">
-      <h2 class="section-title">Core Skills</h2>
-      <p class="section-subtitle">A comprehensive toolkit spanning eCommerce, Cloud, Architecture, and AI</p>
-    </div>
-    <div class="skills-container">
-      
-      <div class="skill-category">
-        <h3>eCommerce & Architecture</h3>
-        <div class="skill-list">
-          <span class="skill-tag">Adobe Commerce</span>
-          <span class="skill-tag">Magento 2</span>
-          <span class="skill-tag">Headless Commerce</span>
-          <span class="skill-tag">Multi-store Architecture</span>
-          <span class="skill-tag">SAP Integration</span>
-          <span class="skill-tag">MDM</span>
-          <span class="skill-tag">Dell Boomi</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Backend & Data</h3>
-        <div class="skill-list">
-          <span class="skill-tag">PHP</span>
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">GraphQL</span>
-          <span class="skill-tag">Microservices</span>
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">Redis</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Cloud & DevOps</h3>
-        <div class="skill-list">
-          <span class="skill-tag">AWS (EC2, S3, RDS)</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">CI/CD Pipelines</span>
-          <span class="skill-tag">Magento Cloud</span>
-          <span class="skill-tag">NewRelic</span>
-          <span class="skill-tag">Git</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Search & Productivity</h3>
-        <div class="skill-list">
-          <span class="skill-tag">ElasticSearch</span>
-          <span class="skill-tag">OpenSearch</span>
-          <span class="skill-tag">Varnish</span>
-          <span class="skill-tag">GitHub Copilot</span>
-          <span class="skill-tag">Gemini / ChatGPT</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Certifications & Education Section -->
-  <section id="education" class="reveal">
-    <div class="section-header">
-      <h2 class="section-title">Certifications & Education</h2>
-      <p class="section-subtitle">Verified professional credentials and academic background</p>
-    </div>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-      <div class="card">
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-          <div class="contact-icon" style="margin: 0; background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #a7f3d0; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-          </div>
-          <h3 style="font-family: var(--font-heading); margin: 0; font-size: 1.25rem;">Adobe Certified Professional</h3>
-        </div>
-        <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 0.5rem;">Adobe Commerce Developer</p>
-        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Credential ID: 8666b88f-ebba-11ef-9883-42010a40002a</p>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">Issued: Feb 2025 | Expires: Feb 2027</p>
-      </div>
-
-      <div class="card">
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-          <div class="contact-icon" style="margin: 0; background: rgba(99, 102, 241, 0.1); border-color: rgba(99, 102, 241, 0.3); color: #a5b4fc; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
-          </div>
-          <h3 style="font-family: var(--font-heading); margin: 0; font-size: 1.25rem;">Bachelor of Technology</h3>
-        </div>
-        <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 0.5rem;">Rajasthan Technical University</p>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;">Computer Science & Engineering | 2007 – 2011</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="reveal">
-    <div class="section-header">
-      <h2 class="section-title">Key Projects & Products</h2>
-      <p class="section-subtitle">Real-world examples of enterprise solutions engineered for scale</p>
-    </div>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-
-      <!-- ASSA ABLOY -->
-      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
-        <div>
-          <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); padding: 0.3rem 0.8rem; border-radius: 4px; color: #a5b4fc; font-weight: 600; margin-bottom: 1rem; display: inline-block;">Enterprise Integration</span>
-          <h3 style="font-family: var(--font-heading); margin-bottom: 0.75rem; font-size: 1.3rem;">ASSA ABLOY</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            SAP-integrated global eCommerce migration of 39+ countries with custom product configurator pipelines.
-          </p>
-        </div>
-        <div style="display: flex; gap: 0.75rem; margin-top: auto;">
-          <a href="projects/assa-abloy.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; text-align: center; justify-content: center;">Case Study</a>
-        </div>
-      </div>
-
-      <!-- VF Corp -->
-      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
-        <div>
-          <span style="font-size: 0.8rem; background: rgba(16, 185, 129, 0.1); padding: 0.3rem 0.8rem; border-radius: 4px; color: #a7f3d0; font-weight: 600; margin-bottom: 1rem; display: inline-block;">Global Retail</span>
-          <h3 style="font-family: var(--font-heading); margin-bottom: 0.75rem; font-size: 1.3rem;">VF Corporation</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            B2B & B2C platforms for Kipling and Eastpak, supporting localized currencies and high volume checkouts.
-          </p>
-        </div>
-        <div style="display: flex; gap: 0.75rem; margin-top: auto;">
-          <a href="projects/vf-corp.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; flex: 1; text-align: center; justify-content: center;">Case Study</a>
-          <a href="https://www.kipling.com" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; flex: 1; text-align: center; justify-content: center;">Visit Site</a>
-        </div>
-      </div>
-
-      <!-- Ellementry -->
-      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
-        <div>
-          <span style="font-size: 0.8rem; background: rgba(192, 132, 252, 0.1); padding: 0.3rem 0.8rem; border-radius: 4px; color: #e9d5ff; font-weight: 600; margin-bottom: 1rem; display: inline-block;">Reporting & APIs</span>
-          <h3 style="font-family: var(--font-heading); margin-bottom: 0.75rem; font-size: 1.3rem;">Ellementry</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            Custom Node.js analytics and sales reporting engine, linked via high-throughput Magento REST endpoints.
-          </p>
-        </div>
-        <div style="display: flex; gap: 0.75rem; margin-top: auto;">
-          <a href="projects/ellementry.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; flex: 1; text-align: center; justify-content: center;">Case Study</a>
-          <a href="https://www.ellementry.com" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; flex: 1; text-align: center; justify-content: center;">Visit Site</a>
-        </div>
-      </div>
-
-      <!-- Angara -->
-      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
-        <div>
-          <span style="font-size: 0.8rem; background: rgba(245, 158, 11, 0.1); padding: 0.3rem 0.8rem; border-radius: 4px; color: #fde68a; font-weight: 600; margin-bottom: 1rem; display: inline-block;">Migration & Speed</span>
-          <h3 style="font-family: var(--font-heading); margin-bottom: 0.75rem; font-size: 1.3rem;">Angara</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            Magento 1.x &rarr; 2.x migration, database schema mapping, and frontend optimization using Varnish clusters.
-          </p>
-        </div>
-        <div style="display: flex; gap: 0.75rem; margin-top: auto;">
-          <a href="projects/angara.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; flex: 1; text-align: center; justify-content: center;">Case Study</a>
-          <a href="https://www.angara.com" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; flex: 1; text-align: center; justify-content: center;">Visit Site</a>
-        </div>
-      </div>
-
-      <!-- Nihal Fashion -->
-      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
-        <div>
-          <span style="font-size: 0.8rem; background: rgba(239, 68, 68, 0.1); padding: 0.3rem 0.8rem; border-radius: 4px; color: #fca5a5; font-weight: 600; margin-bottom: 1rem; display: inline-block;">eCommerce Storefront</span>
-          <h3 style="font-family: var(--font-heading); margin-bottom: 0.75rem; font-size: 1.3rem;">Nihal Fashion</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            Custom custom-options measurement configurator for custom ethnic clothing stitching and orders.
-          </p>
-        </div>
-        <div style="display: flex; gap: 0.75rem; margin-top: auto;">
-          <a href="projects/nihal-fashion.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; flex: 1; text-align: center; justify-content: center;">Case Study</a>
-          <a href="https://www.nihalfashion.com" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; flex: 1; text-align: center; justify-content: center;">Visit Site</a>
-        </div>
-      </div>
-
-      <!-- Amazon Pay -->
-      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
-        <div>
-          <span style="font-size: 0.8rem; background: rgba(59, 130, 246, 0.1); padding: 0.3rem 0.8rem; border-radius: 4px; color: #bfdbfe; font-weight: 600; margin-bottom: 1rem; display: inline-block;">Core SDK Integration</span>
-          <h3 style="font-family: var(--font-heading); margin-bottom: 0.75rem; font-size: 1.3rem;">Amazon Pay Plugin</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            Official transaction capture, settlement, and refund SDK plugin distributed for Magento 1.x & 2.x.
-          </p>
-        </div>
-        <div style="display: flex; gap: 0.75rem; margin-top: auto;">
-          <a href="projects/amazon-pay.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; text-align: center; justify-content: center;">Case Study</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="reveal" style="padding-bottom: 8rem;">
-    <div class="section-header">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">Let's discuss how we can build your next commerce experience</p>
-    </div>
-    <div class="contact-container">
-      
-      <div class="contact-method">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        </div>
-        <div class="contact-details">
-          <h4>Email</h4>
-          <p><a href="mailto:princemukdam@gmail.com">princemukdam@gmail.com</a></p>
-        </div>
-      </div>
-
-      <div class="contact-method">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <div class="contact-details">
-          <h4>Phone</h4>
-          <p><a href="tel:+91-9887852003">+91-9887852003</a></p>
-        </div>
-      </div>
-
-      <div class="contact-method">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="contact-details">
-          <h4>Location</h4>
-          <p>Jaipur, Rajasthan, India</p>
-        </div>
-      </div>
-
-      <div class="contact-method">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-        </div>
-        <div class="contact-details">
-          <h4>LinkedIn</h4>
-          <p><a href="https://linkedin.com/in/prince-yadav-80001359" target="_blank">prince-yadav-80001359</a></p>
-        </div>
-      </div>
-
-      <div class="contact-method">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-        </div>
-        <div class="contact-details">
-          <h4>GitHub</h4>
-          <p><a href="https://github.com/mukdam" target="_blank">github.com/mukdam</a></p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
+  <!-- Custom Script -->
   <script src="script.js"></script>
 </body>
+
 </html>
