@@ -248,7 +248,7 @@ function execTermCmd(cmd) {
     dynamicLogs.innerHTML = '';
     return;
   } else if (cleanCmd === 'help') {
-    resLine.innerHTML = `<span style="color: #38bdf8;">Available commands:</span><br>&nbsp;&bull; <b>cat contact.json</b> - Output contact info JSON<br>&nbsp;&bull; <b>status</b> - Check microservices telemetry status<br>&nbsp;&bull; <b>skills</b> - Display React, Node.js & Adobe Commerce tech stack<br>&nbsp;&bull; <b>resume</b> - Trigger resume PDF download<br>&nbsp;&bull; <b>clear</b> - Clear terminal logs`;
+    resLine.innerHTML = `<span style="color: #38bdf8;">Available commands:</span><br>&nbsp;&bull; <b>cat contact.json</b> - Output contact info JSON<br>&nbsp;&bull; <b>status</b> - Check microservices telemetry status<br>&nbsp;&bull; <b>skills</b> - Display Python, Adobe Commerce & Cloud tech stack<br>&nbsp;&bull; <b>resume</b> - Trigger resume PDF download<br>&nbsp;&bull; <b>clear</b> - Clear terminal logs`;
   } else if (cleanCmd === 'cat contact.json' || cleanCmd === 'contact') {
     resLine.innerHTML = `<pre style="color: #a5b4fc; font-family: var(--font-mono); margin-top: 4px;">{
   "name": "Prince Yadav",
@@ -260,12 +260,12 @@ function execTermCmd(cmd) {
   "linkedin": "https://linkedin.com/in/prince-yadav-80001359"
 }</pre>`;
   } else if (cleanCmd === 'status') {
-    resLine.innerHTML = `<span style="color: #34d399;">[OK] MonitoringCarrier (React/Node.js): RUNNING (Port 8080)</span><br><span style="color: #34d399;">[OK] SAP Boomi Middleware: CONNECTED (Latency &lt; 40ms)</span><br><span style="color: #34d399;">[OK] Adobe Commerce Cloud: 39+ REGIONS ONLINE</span>`;
+    resLine.innerHTML = `<span style="color: #34d399;">[OK] MonitoringCarrier (Python/FastAPI): RUNNING (Port 8000)</span><br><span style="color: #34d399;">[OK] Adobe App Builder Serverless: ONLINE</span><br><span style="color: #34d399;">[OK] SAP Boomi Middleware: CONNECTED (Latency &lt; 40ms)</span><br><span style="color: #34d399;">[OK] Adobe Commerce PaaS: 39+ REGIONS ONLINE</span>`;
   } else if (cleanCmd === 'skills') {
-    resLine.innerHTML = `<span style="color: #fbbf24;">[STACK] React.js | Node.js | Express | Adobe Commerce (Magento 2) | SAP Boomi | AWS | Redis | Docker | AI Copilot</span>`;
+    resLine.innerHTML = `<span style="color: #fbbf24;">[STACK] Python (FastAPI/Django) | Adobe Commerce Cloud (PaaS) | Adobe App Builder | SAP Boomi | AWS | Redis | Docker | AI Copilot</span>`;
   } else if (cleanCmd === 'resume' || cleanCmd === 'download') {
-    resLine.innerHTML = `<span style="color: #34d399;">[DOWNLOAD] Initiating download for 'Prince Resume Magento & Js.pdf'...</span>`;
-    window.location.href = 'Prince Resume Magento & Js.pdf';
+    resLine.innerHTML = `<span style="color: #34d399;">[DOWNLOAD] Initiating download for 'Prince Resume.pdf'...</span>`;
+    window.location.href = 'Prince Resume.pdf';
   } else {
     resLine.innerHTML = `<span style="color: #f87171;">bash: command not found: ${escapeHtml(cmd)}. Type 'help' for options.</span>`;
   }
