@@ -1,0 +1,23 @@
+Dear Hiring Manager,
+
+I am writing to express my interest in Solution Architect and Senior Engineering opportunities within your organization. I bring 10+ years of experience architecting, scaling, and optimizing enterprise-grade commerce platforms on Adobe Commerce Cloud (PaaS) and high-concurrency Python microservices. I specialize in Adobe App Builder serverless solutions, real-time enterprise integrations (SAP via Dell Boomi), and cloud-native AWS architectures.
+
+Currently, I work as a Staff Engineer at Nagarro, where I lead platform architecture and enterprise integrations for global clients, including ASSA ABLOY. My work spans consolidating 39+ global storefronts (100K+ SKUs), establishing real-time SAP ERP synchronization patterns (MDM, Orders, Pricing) via Dell Boomi with zero transaction loss, and designing in-house API product configurators that eliminate costly third-party licensing dependencies.
+
+I have deep hands-on expertise with Adobe Commerce Cloud (PaaS) environments, Adobe App Builder (I/O Runtime & Events), performance optimization (Varnish/Redis caching, boosting throughput by 30%+), and production governance. I am an Adobe Certified Professional – Adobe Commerce Developer, ensuring rigorous adherence to enterprise architectural standards and zero-downtime CI/CD deployment pipelines.
+
+In addition to Adobe Commerce, I bring strong expertise in Python (FastAPI / Django), where I architected an asynchronous multi-carrier shipping and telemetry platform handling 500K+ monthly logistics events and 1M+ customer queries across 30+ regions. I also actively leverage AI-enabled development workflows (GitHub Copilot, Gemini, ChatGPT) to accelerate API prototyping, unit test generation, and system delivery by 35%.
+
+I have extensive experience owning complex distributed systems end-to-end—from system design and mentoring 5–8 engineers to production releases and incident management (reducing MTTR by 25%). I value clean code, high-throughput performance, and maintainable architectures that directly drive business value.
+
+I would welcome the opportunity to discuss how my architecture, Adobe App Builder, and Python integration expertise can contribute to your engineering initiatives.
+
+Thank you for your time and consideration.
+
+Kind regards,
+Prince Yadav
+Solution Architect | Adobe Commerce Cloud (PaaS) & App Builder | Python Microservices
+📧 princemukdam@gmail.com
+📞 +91-9887852003
+🔗 linkedin.com/in/prince-yadav-80001359
+🌐 mukdam.github.io
